@@ -1,0 +1,22 @@
+{% extends "base.html" %}
+{% load i18n %}
+{% load staticfiles %}
+
+{% block content %}
+<div class="login-form">
+  <div class="login-form-header">
+    Login
+  </div>
+  <div class="login-form-body">
+    <form method="post" action="." id="login-form">
+      {% csrf_token %} 
+      {{ form.as_p }}
+      <input type="submit" required value="{% trans 'Log in' %}" class="submit-btn">
+      <input type="hidden" required  name="next" value="{{ next }}">
+    </form>
+  <p>{% trans "Forgot password" %}? <a href="{% url 'auth_password_reset' %}">{% trans "Reset it" %}</a>!</p>
+  <p>{% trans "Not member" %}? <a href="{% url 'registration_register' %}">{% trans "Register" %}</a>!</p>
+  </div>
+</div>
+<script type="text/javascript" src="{% static 'js/form_prevent_default.js' %}"></script>
+{% endblock %}
