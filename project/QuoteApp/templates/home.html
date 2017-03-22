@@ -1,11 +1,13 @@
 {% extends 'base.html' %}
 {% block content %}
- <div class="form-header">
-     Login
- </div>
- <div class="form-body">
-     <form>
+<h1 class="logo">Quotiyapa</h1>
+<p class="welcome-user">Hello <a href="/profile/{{ user.username}}">{{ user.username }}</a>
+     {% for i in quotes %}
+         <div class="quote-block-header">
+         <p>Posted by <a href="/profile/{{ i.user}}" class="user-link">{{ i.user }}</p></a>
+         </div>
          
-     </form>
+        <p>{{ i.quotes }}<small> -{{ i.author}}</small></p>
+     {% endfor %}
  </div>
 {% endblock content%}

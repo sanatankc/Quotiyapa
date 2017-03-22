@@ -3,6 +3,22 @@ body {
   color: #fff;
   font-family: 'Lato', sans-serif; }
 
+.logo {
+  display: inline-block; }
+
+.welcome-user {
+  display: inline-block;
+  float: right; }
+  .welcome-user a {
+    color: white;
+    text-decoration: none; }
+    .welcome-user a:hover {
+      border-bottom: 1px dotted white; }
+
+.login-form {
+  margin-left: calc(50% - 150px);
+  margin-top: calc(50% - 143px); }
+
 .login-form-header {
   background-color: #017bd7;
   width: 300px;
@@ -17,15 +33,29 @@ body {
   width: 300px;
   padding: 15px;
   margin-top: 0px; }
+  .login-form-body label {
+    display: block; }
+  .login-form-body input {
+    width: 100%;
+    font-size: 24px;
+    font-weight: bold; }
 
 .submit-btn {
   background-color: #017bd7;
   color: #fff;
-  border: 0px;
+  border: 2px solid #017bd7;
   padding: 7px;
-  border-radius: 3px; }
+  border-radius: 3px;
+  cursor: pointer;
+  transition: 0.2s ease-in-out; }
+  .submit-btn:hover {
+    background-color: #fff;
+    color: #017bd7; }
 
 ul.errorlist li {
   list-style: none;
   color: red;
   opacity: 0.6; }
+
+.helptext {
+  display: none; }
