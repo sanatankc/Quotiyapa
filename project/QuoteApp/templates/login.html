@@ -1,8 +1,11 @@
 {% extends "base.html" %}
 {% load i18n %}
 {% load staticfiles %}
-
-{% block content %}
+{% block stylesheet %}
+  {{ block.super }}
+  <link href="{% static 'css/login.css' %}" rel="stylesheet">
+{% endblock %}
+  {% block content %}
 <div class="login-form">
   <div class="login-form-header">
     Login

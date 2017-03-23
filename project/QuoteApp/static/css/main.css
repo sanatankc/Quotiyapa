@@ -1,19 +1,40 @@
 body {
-  background: #444;
-  color: #fff;
+  background: #fff;
+  color: #111;
   font-family: 'Lato', sans-serif; }
 
 .logo {
+  display: inline-block; }
+
+.nav {
+  display: block; }
+
+.quote-block {
+  background-color: #fff;
+  color: #111;
+  border-radius: 5px;
+  padding: 10px;
+  margin-bottom: 20px;
+  margin-left: calc(50% - 225px);
+  width: 450px;
+  border: 2px solid black; }
+
+.quote-block-header img.user-icon {
+  width: 30px;
+  border-radius: 50%;
+  display: inline-block; }
+
+.quote-block-header p {
   display: inline-block; }
 
 .welcome-user {
   display: inline-block;
   float: right; }
   .welcome-user a {
-    color: white;
+    color: black;
     text-decoration: none; }
     .welcome-user a:hover {
-      border-bottom: 1px dotted white; }
+      border-bottom: 1px dotted black; }
 
 .login-form {
   margin-left: calc(50% - 150px);
